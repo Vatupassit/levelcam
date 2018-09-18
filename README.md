@@ -5,3 +5,4 @@ Our school project, measuring angle of line drawn on top of camera display
 Vatupassit is a group of students from Lahti University of Applied Sciences
 
 ## Students
+Sampo Harjula
