@@ -7,3 +7,4 @@ Vatupassit is a group of students from Lahti University of Applied Sciences
 ## Students
 Sampo Harjula
 Joni Juntunen
+Noora Etula
