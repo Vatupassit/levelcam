@@ -55,8 +55,8 @@ public class AngleLineFragment extends Fragment implements SensorEventListener {
         SensorManager.remapCoordinateSystem(rotationMatrix, SensorManager.AXIS_X, SensorManager.AXIS_Z, rotationMatrix);
         SensorManager.getOrientation(rotationMatrix, orientationValues);
 
-        float x = (float) Math.toDegrees(orientationValues[0]);
-        float y = (float) Math.toDegrees(orientationValues[1]);
+        float y = (float) Math.toDegrees(orientationValues[0]);
+        float x = (float) Math.toDegrees(orientationValues[1]);
         float z = (float) Math.toDegrees(orientationValues[2]);
 
         angleX.setText("X: " + String.valueOf(Math.floor(Math.abs(x))) + "°");
