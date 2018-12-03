@@ -33,4 +33,14 @@ public class MainFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    /*
+        Fragment compassF = new CompassFragment();
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        transaction.replace(R.id.container, compassF);
+        transaction.addToBackStack(null);
+
+        transaction.commit();
+*/
 }
