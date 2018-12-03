@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 import vatupassit.levelcam.R;
 
 public class AngleLineFragment extends Fragment implements SensorEventListener {
@@ -59,9 +61,9 @@ public class AngleLineFragment extends Fragment implements SensorEventListener {
         float x = (float) Math.toDegrees(orientationValues[1]);
         float z = (float) Math.toDegrees(orientationValues[2]);
 
-        angleX.setText("X: " + String.valueOf(Math.floor(Math.abs(x))) + "°");
-        angleY.setText("Y: " + String.valueOf(Math.floor(Math.abs(y))) + "°");
-        angleZ.setText("Z: " + String.valueOf(Math.floor(Math.abs(z))) + "°");
+        //angleX.setText("X: " + String.valueOf(Math.floor(Math.abs(x))) + "°");
+        //angleY.setText("Y: " + String.valueOf(Math.floor(Math.abs(y))) + "°");
+        angleZ.setText(new DecimalFormat("#").format((Math.abs(z))) + "°");
     }
 
     @Override
@@ -76,8 +78,8 @@ public class AngleLineFragment extends Fragment implements SensorEventListener {
         sensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
 
-        angleX = (TextView)getView().findViewById(R.id.angleX);
-        angleY = (TextView)getView().findViewById(R.id.angleY);
+        //angleX = (TextView)getView().findViewById(R.id.angleX);
+        //angleY = (TextView)getView().findViewById(R.id.angleY);
         angleZ = (TextView)getView().findViewById(R.id.angleZ);
 
 
