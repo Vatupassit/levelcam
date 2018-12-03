@@ -11,5 +11,9 @@
         android:name="vatupassit.levelcam.ui.main.AngleLineFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <fragment
+        android:name="vatupassit.levelcam.ui.main.CompassFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </android.support.constraint.ConstraintLayout>
