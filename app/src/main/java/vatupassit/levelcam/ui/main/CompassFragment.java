@@ -1,6 +1,7 @@
 package vatupassit.levelcam.ui.main;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -38,9 +39,11 @@ import static vatupassit.levelcam.R.*;
  */
 public class CompassFragment extends Fragment implements SensorEventListener {
     // define the display assembly compass picture
-    private ImageView viisari;
 
-    private float currentDegree = 0f;
+    private ImageView viisariImageView;
+    private Drawable viisariDrawable;
+
+    private float currentDegree = -45f;
 
     private SensorManager mSensorManager;
     private Sensor sensor;
@@ -76,7 +79,12 @@ public class CompassFragment extends Fragment implements SensorEventListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_compass, container, false);
+        View view = inflater.inflate(R.layout.fragment_compass, container, false);
+
+        viisariImageView = view.findViewById(id.viisari);
+        viisariDrawable = viisariImageView.getDrawable();
+
+        return view;
     }
 
     @Override
@@ -87,6 +95,17 @@ public class CompassFragment extends Fragment implements SensorEventListener {
     public void onStart(){
         super.onStart();
 
+        RotateAnimation rotateAnim;
+        rotateAnim = new RotateAnimation(
+                currentDegree,
+                -45,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnim.setInterpolator(new LinearInterpolator());
+        rotateAnim.setDuration(210);
+
+        viisariImageView.startAnimation(rotateAnim);
+        currentDegree = -45;
 
         // initialize your android device sensor capabilities
         mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
@@ -102,19 +121,20 @@ public class CompassFragment extends Fragment implements SensorEventListener {
 
     public void onSensorChanged(SensorEvent event) {
 
-        float degree = Math.round(event.values[0]);
-        RotateAnimation anim = new RotateAnimation(
+        float degree = Math.round(event.values[0] - 45);
+        RotateAnimation rotateAnim;
+        rotateAnim = new RotateAnimation(
                 currentDegree,
                 -degree,
                 Animation.RELATIVE_TO_SELF, 0.5f,
-                Animation.RELATIVE_TO_SELF,0.5f);
-        anim.setInterpolator(new LinearInterpolator());
-        anim.setDuration(210);
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnim.setInterpolator(new LinearInterpolator());
+        rotateAnim.setDuration(210);
 
-        this.viisari.startAnimation(anim);
+        viisariImageView.startAnimation(rotateAnim);
         currentDegree = -degree;
 
-   }
+    }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {

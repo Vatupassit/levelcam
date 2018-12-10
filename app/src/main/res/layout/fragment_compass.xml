@@ -9,15 +9,17 @@
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
+        android:id="@+id/kompassi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/kompassi"
         android:src="@drawable/kompassi" />
 
     <ImageView
+        android:id="@+id/viisari"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="@string/kompassi"
         android:src="@drawable/viisari" />
 
@@ -25,9 +27,8 @@
         android:id="@+id/tvHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:layout_marginTop="20dp"
-        android:text="Heading: 0.0" />
+        android:text="@string/headingStart" />
 
 </FrameLayout>
