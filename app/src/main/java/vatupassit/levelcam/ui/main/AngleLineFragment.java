@@ -94,9 +94,16 @@ public class AngleLineFragment extends Fragment implements SensorEventListener {
 
     }
 
-    public void onPause() {
+    public void onResume() {
+        super.onResume();
+        
+        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_GAME);
+    }
 
+
+    public void onPause() {
         super.onPause();
+
         sensorManager.unregisterListener(this);
     }
 }
