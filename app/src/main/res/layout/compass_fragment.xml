@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.CompassFragment">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="right"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="0dp"
+        android:text="Heading: 0.0" />
+    <!--<TextView
+        android:id="@+id/testAngleX"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:textColor="#a40404"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/testAngleY"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="60dp"
+        android:textColor="#a40404"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/testAngleZ"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="90dp"
+        android:textColor="#a40404"
+        android:textSize="25dp" />-->
+    <TextView
+        android:id="@+id/magX"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="90dp"
+        android:textColor="#a40404"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/magY"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="50dp"
+        android:textColor="#a40404"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/magZ"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:textColor="#a40404"
+        android:textSize="25dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/compass" />
+
+</FrameLayout>
