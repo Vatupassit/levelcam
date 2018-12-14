@@ -1,4 +1,4 @@
-package vatupassit.levelcam.ui.main.;
+package vatupassit.levelcam.ui.main;
 
 import android.arch.lifecycle.ViewModel;
 

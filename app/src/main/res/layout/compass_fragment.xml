@@ -71,9 +71,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_gravity="right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/compass2" />
+        android:src="@mipmap/compass3" />
 
 </FrameLayout>
