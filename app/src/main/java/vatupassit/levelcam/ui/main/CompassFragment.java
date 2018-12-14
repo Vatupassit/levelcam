@@ -128,8 +128,8 @@ public class CompassFragment extends Fragment implements SensorEventListener {
         gravitationValues = new float[3];
         magnetoValues = new float[3];
 
-        mSensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_GAME);
-        mSensorManager.registerListener(this, gsensor, SensorManager.SENSOR_DELAY_GAME);
+        mSensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI);
+        mSensorManager.registerListener(this, gsensor, SensorManager.SENSOR_DELAY_UI);
     }
     public void OnPause() {
 
