@@ -17,4 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <fragment android:id="@+id/light_fragment"
+        android:name="vatupassit.levelcam.ui.main.LightFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </android.support.constraint.ConstraintLayout>
