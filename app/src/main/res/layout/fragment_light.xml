@@ -18,6 +18,11 @@
         android:id="@+id/LIGHT_reading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp" />
+        android:layout_gravity="right"
+        android:layout_marginTop="0dp"
+        android:textAlignment="gravity"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp" />
+
 
 </FrameLayout>
