@@ -112,7 +112,7 @@ public class LightFragment extends Fragment implements SensorEventListener {
     public void onSensorChanged(SensorEvent event) {
 
         if(event.sensor.getType() == Sensor.TYPE_LIGHT){
-            this.textLIGHT_reading.setText("LIGHT: " + event.values[0] + " LUX");
+            this.textLIGHT_reading.setText(event.values[0] + " LUX");
         }
 
     }
