@@ -3,4 +3,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="kompassi">Kompassi kuvaus</string>
     <string name="headingStart">Heading: 0.0</string>
+    <string name="toggleLight">Light</string>
+    <string name="toggleCompass">Compass</string>
 </resources>

@@ -16,18 +16,23 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Size;
 import android.view.Surface;
 import android.view.SurfaceView;
 import android.view.TextureView;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import org.w3c.dom.Text;
 
 import java.util.Arrays;
 
+import vatupassit.levelcam.ui.main.CompassFragment;
+import vatupassit.levelcam.ui.main.LightFragment;
 import vatupassit.levelcam.ui.main.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,15 +58,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.abs_layout);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, MainFragment.newInstance())
                     .commitNow();
         }
-
         cameraView = findViewById(R.id.camera);
         cameraView.setSurfaceTextureListener(textureListener);
     }
+
+
 
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @Override
