@@ -5,4 +5,8 @@
     <string name="headingStart">Heading: 0.0</string>
     <string name="toggleLight">Light</string>
     <string name="toggleCompass">Compass</string>
+    <string name="CompOn">Compass on</string>
+    <string name="CompOff">Compass off</string>
+    <string name="lightOn">Light on</string>
+    <string name="lightOff">Light off</string>
 </resources>
